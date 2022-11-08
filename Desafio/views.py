@@ -13,13 +13,8 @@ def listadoFamiliares(request):
 
     datos = {
         "listaFamiliares": listaFamiliares,
+        }
 
-    }
-
-    archivo = open(r"C:\Users\JoseJ\OneDrive\Escritorio\CoderHouse\Python\python\projecto_coder_python\Desafio\Template.html")
-    plantilla = Template(archivo.read())
-    archivo.close()
-    contexto = Context(datos)
-    doc = plantilla.render(contexto)
-    
-    return HttpResponse(doc)
+    plantilla = loader.get_template("Template.html")
+    documento = plantilla.render(datos)
+    return HttpResponse(documento)

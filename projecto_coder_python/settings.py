@@ -55,7 +55,7 @@ ROOT_URLCONF = 'projecto_coder_python.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r"C:\Users\JoseJ\OneDrive\Escritorio\CoderHouse\Python\python\projecto_coder_python\Desafio\__pycache__\templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
